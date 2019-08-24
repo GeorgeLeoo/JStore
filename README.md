@@ -100,7 +100,8 @@ const store = require('./store/index.js');
 getApp().$store.dispatch("saveUserInfo", {userInfo: e.detail.userInfo});
 ```
 结果就将userInfo数据保存到 state 中，然后可以在页面的任意地方调用这个数据
-![](./shortcut/1.png)
+![image.png](https://upload-images.jianshu.io/upload_images/5205102-3e8ef5287f90f473.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 dispatch有两个参数，第一个参数是 action 中定义的函数名，第二个参数是要保存的数据要传哪些参数给 action 中的方法，
 
@@ -111,14 +112,16 @@ getApp().$store.dispatch("saveWeather");
 ```
 结果：
 
-![](./shortcut/2.png)
+![image.png](https://upload-images.jianshu.io/upload_images/5205102-c6867fee488da358.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 当state 中有数据后，取出数据使用 getState 方法
 ```
 getApp().$store.getState(["userInfo", "weatherinfo"], this);
 ```
 getState()方法有两个参数，第一个参数是一个数组，数组中存放的都是state 中的 key 的名称，而二个参数是当前页面的 this 指向，如果设置了 this，就会将数据保存到当前页面的 data 中
 
-![](./shortcut/3.png)
+![image.png](https://upload-images.jianshu.io/upload_images/5205102-98bd09af68e3c438.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 # 微信小程序状态管理工具 JStore api
 # API参考
@@ -168,3 +171,4 @@ context对象包含以下属性：
 ### getState
 * commit(type: array, context?: object)
 获取 state。
+
